@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico" rel="stylesheet">
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> 
+<button class="openbtn" id="but" onclick="openNav()">My Projects ×</button>      
+      </a>
+  <a href="#">Project 1</a>
+  <a href="#">Project 2</a>
+  <a href="#">Project 3</a>
+  <a href="#">Project 4</a>
+</div>
+
+<div id="main" >
+    <div class="nav">
+  <button class="openbtn" onclick="openNav()">☰ My Projects</button>
+    </div>
+    <div class="body-1" id="boy">
+  <h2>There is no substitute for hard work</h2>
+    </div>
+    <div class="project-body" id="bod">
+    
+    help
+    </div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "225px";
+  document.getElementById("bod").style.paddingLeft = "225px";
+    document.getElementById("boy").style.paddingLeft = "225px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("bod").style.paddingLeft= "0";
+  document.getElementById("boy").style.paddingLeft= "0";
+}
+</script>
+
+         
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
