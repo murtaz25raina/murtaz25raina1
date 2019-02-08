@@ -37,6 +37,14 @@ $(document).ready(function()
         </script>
         
     <script>
+        function killmonger() {
+            document.getElementById("foot").style.display = "none";
+        }
+        
+        function livemonger() {
+            document.getElementById("foot").style.display = "block";
+        }
+        
         function s1 () {
            document.getElementById("login").classList.add("active"); document.getElementById("signup").classList.remove("active");   
         }
@@ -72,9 +80,9 @@ $(document).ready(function()
             <div class="col-md-6">
         <form method="get" action="dashboard.html">
         <label for="email" >Email :</label>
-        <input type="email" name="email" placeholder="e.g abc@xyz.com" required>
+        <input type="email" name="email" placeholder="e.g abc@xyz.com" onfocus="killmonger()" onfocusout="livemonger()" required>
         <label for="email" >Password :</label>
-        <input type="password" name="password" placeholder="e.g *******" min="6">
+        <input type="password" name="password" placeholder="e.g *******" min="6" onfocus="killmonger()" onfocusout="livemonger()" required>
             <button type="submit" class="btn btn-primary">Login</button> </form></div>
         <div class="col-md-6" >
             <img class="stImage" src="download.png">
@@ -106,7 +114,7 @@ $(document).ready(function()
        
         
         </div>  
-         <div class="footer">
+         <div class="footer" id="foot">
              <span>Contact Info  <a id="cont" href="mailto: murtazraina25@gmail.com">:    Email Us here</a></span><span style="float: right">Mobile Number : 7888994829</span>
         </div>
         
