@@ -4,6 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="dashboard.css">
+        
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed:700" rel="stylesheet">
+        
     </head>
     <body>
     <div class="outer" > 
@@ -12,15 +15,66 @@
            <a href="index.html" style="display:inline;float: right;">Logout</a>
         </div>
         <div class="bodyinner">
-        <div class="left">
+        <div class="left" id="left1">
+         <div class="sidebarbutton">
+         <button id="sidebutton" type="button" onclick="opensidebar()">☰ &nbsp; View Boards</button> 
+         </div>
+         <div class="image-1" id="image-11">
+         <img src="project-management-increases-the-probability-of-project-being-completed-on-time-by-15.-2-1-296x300.png">   
             
-            
+         </div>
+         <div class="sidebar" id="key">
+         <h2>Boards <button type="button" id="closes"onclick="closesidebar()">&times;</button></h2>
+         <ul id="demo">
+         <l1><a onclick="showproj()">Board 1</a></l1>
+         <l1>Board 2</l1>
+         <l1>Board 3</l1>
+         </ul>
+        </div>       
         </div>
         <div class="right">
-            
-            
+        <div class="addbox">
+        <form action="#" method="get" id="form-1">
+            <input type="text" name="addboard" placeholder="Board Name e.g Board 1" class="addboard" id="inp" required>
+            <button type="button" class="addboard" style="background-color: #4cd137;color: white;" onclick="adding()">Add Board</button>
+        </form>    
+        </div>  
+        <div class="bodyOfBoard" id="proj1">
+        <h3>Project 1 : </h3>
+            <h4>Project Name : Frontend Development</h4>
+            <h4>Time Left : 4hrs</h4>
+        <p id="Project1">Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.</p><br>
+        <button type="button" style="background-color: #4cd137;color: white;border-radius: 5px;padding: 15px;">Start Project</button>
+        </div>    
         </div>
         </div>
     </div>
+        <script>
+        function adding() {
+            var list = document.getElementById('demo');
+            var boardName = document.getElementById('inp').value;
+            var entry = document.createElement('l1');
+            entry.appendChild(document.createTextNode(boardName));
+            list.appendChild(entry);
+        }
+        
+        function opensidebar() {
+             document.getElementById("key").style.display = "flex";
+             document.getElementById("sidebutton").style.display = "none";
+            document.getElementById("image-11").style.display = "none";
+             document.getElementById("left1").style.backgroundColor = "#1289A7";
+            
+        }
+            function showproj() {
+               document.getElementById("proj1").style.display = "block"; 
+            }
+            
+        function closesidebar() {
+             document.getElementById("key").style.display = "none";
+             document.getElementById("sidebutton").style.display = "block";
+            document.getElementById("image-11").style.display = "block";
+            document.getElementById("left1").style.backgroundColor = "white";
+        }
+        </script>
     </body>
 </html>
