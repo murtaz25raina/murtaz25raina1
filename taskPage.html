@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="taskPage.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Felipa|Lobster" rel="stylesheet">
+    <title>Task Page</title>
+    </head>
+    <body>
+    <div class="outerbody">
+        <div class="navbar">
+          <a href="dashboard.html"><i class="fas fa-globe"></i>&nbsp;<span id="dash">Home</span></a>
+        </div>
+        <div class="taskBody">
+        <div class="addtask">
+            <form method="get" action="#">
+                <div class="topform">
+                <div class="a1">
+                <label for="taskname">Name :</label>
+                <input type="text" name="taskName" placeholder="Enter Task Name" id="name1" required></div>
+                <div class="a2">
+                <label for="marks" >Marks :</label>
+                    <input type="number" name="marks" placeholder="Total Marks" id="marks1" required></div>
+                    </div>
+                <div class="lowform">
+                    <div class="a3">
+                <label for="startTime">Start Day :</label>
+                        <input type="date" name="startTime" id="start1" required></div>
+                    <div class="a4">
+                <label for="endTime" >End Day :</label>
+                <input type="date" name="endTime" id="end1" required>
+                    </div></div>
+                <div style=" display: flex;flex-direction: row;justify-content:flex-end;">
+                    <button type="button" onclick="adding()" >Add Task</button>
+            </div></form>
+        </div>
+        <div class="taskboard">
+        <div class="b1">
+        <ol id="demo1">
+        <h2 style="color: #f1c40f;">Name</h2>
+        <l1>HTML</l1>   
+        </ol>    
+        </div>
+        <div class="b2">
+        <ol id="demo2">
+        <h2 style="color: #3498db;">Marks</h2>
+        <l1>100</l1>    
+        </ol>    
+        </div>
+        <div class="b3">
+        <ol id="demo3">
+        <h2 style="color: #9b59b6;">Start</h2>
+        <l1>01-01-2019</l1>    
+        </ol>    
+        </div>
+        <div class="b4">
+        <ol id="demo4">
+        <h2 style="color: #e74c3c;">End</h2>
+        <l1>01-01-2019</l1>    
+        </ol>    
+        </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        function adding() {
+            var list1 = document.getElementById('demo1');
+            var list2 = document.getElementById('demo2');
+            var list3 = document.getElementById('demo3');
+            var list4 = document.getElementById('demo4');
+            var taskName = document.getElementById('name1').value;
+            var taskMarks = document.getElementById('marks1').value;
+            var taskStart = document.getElementById('start1').value;
+            var taskEnd = document.getElementById('end1').value;
+            console.log(taskName + taskMarks +taskStart +taskEnd);
+            if(taskName=="" || taskMarks=="" || taskStart=="" || taskEnd==""){
+                alert("wrong Input");
+            }
+            else{
+            taskStart=taskStart.split("-").reverse().join("-");
+            taskEnd=taskEnd.split("-").reverse().join("-");
+            var entry1 = document.createElement('l1');
+            var entry2 = document.createElement('l1');
+            var entry3 = document.createElement('l1');
+            var entry4 = document.createElement('l1');
+      
+      entry1.appendChild(document.createTextNode(taskName));
+      entry2.appendChild(document.createTextNode(taskMarks));
+      entry3.appendChild(document.createTextNode(taskStart));
+      entry4.appendChild(document.createTextNode(taskEnd));
+            
+            
+            list1.appendChild(entry1);
+            list2.appendChild(entry2);
+            list3.appendChild(entry3);
+            list4.appendChild(entry4);
+        }}    
+        </script>
+        
+        
+    </body>
+</html>

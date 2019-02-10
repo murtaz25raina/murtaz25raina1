@@ -44,7 +44,7 @@
             <h4>Project Name : Frontend Development</h4>
             <h4>Time Left : 4hrs</h4>
         <p id="Project1">Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.</p><br>
-        <button type="button" style="background-color: #4cd137;color: white;border-radius: 5px;padding: 15px;">Start Project</button>
+        <button type="button" style="background-color: #4cd137;color: white;border-radius: 5px;padding: 15px;" onclick="newDoc()">Start Project</button>
         </div>    
         </div>
         </div>
@@ -57,7 +57,10 @@
             entry.appendChild(document.createTextNode(boardName));
             list.appendChild(entry);
         }
-        
+        function newDoc() {
+        window.location.assign("taskPage.html")
+        }
+            
         function opensidebar() {
              document.getElementById("key").style.display = "flex";
              document.getElementById("sidebutton").style.display = "none";
